@@ -20,4 +20,4 @@ def test_server(resp):
     Back-end Challenge 2021 🏅 - Space Flight News
     """
     assert resp.status_code == 200
-    assert resp.json == {'mensagem': 'Back-end Challenge 2021 🏅 - Space Flight News'}
+    assert resp.json() == {'mensagem': 'Back-end Challenge 2021 🏅 - Space Flight News'}
