@@ -18,6 +18,7 @@
 * GitHub Actions
 * Heroku
 * SQLAlchemy
+* Python-decouple
 
 
 # Como instalar e utilizar o projeto
