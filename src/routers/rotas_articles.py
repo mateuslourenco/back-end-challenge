@@ -1,14 +1,28 @@
 from fastapi import APIRouter
 
+from src.schemas import schemas
+
 router = APIRouter()
 
 
-@router.get('/articles/')
+@router.get('/articles/', response_model=schemas.News)
 def listar_todos_os_artigos():
     """
     Lista todos os artigos da base de dados
     """
-    return {'msg': 'rota articles criada'}
+    return {
+        "id": 14337,
+        "title": "General Dynamics’ cloud contract with NGA moves forward after Leidos withdraws protest",
+        "url": "https://spacenews.com/",
+        "imageUrl": "https://spacenews.com/wp-content/uploads/2022/03/gdit-uds-contract-2.png",
+        "newsSite": "SpaceNews",
+        "summary": "General Dynamics won a 10-year",
+        "publishedAt": "2022-03-19T17:04:23.000Z",
+        "updatedAt": "2022-03-19T17:04:23.739Z",
+        "featured": False,
+        "launches": [],
+        "events": []
+    }
 
 
 @router.get('/articles/{id_artigo}')
