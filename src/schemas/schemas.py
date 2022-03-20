@@ -1,3 +1,7 @@
+"""
+Um schema é o formato de dados que a respota irá retornar no endpoint.
+"""
+
 from typing import Optional, List
 
 from pydantic import BaseModel
