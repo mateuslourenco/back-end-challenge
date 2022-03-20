@@ -17,6 +17,7 @@
 * Flake8
 * GitHub Actions
 * Heroku
+* SQLAlchemy
 
 
 # Como instalar e utilizar o projeto
