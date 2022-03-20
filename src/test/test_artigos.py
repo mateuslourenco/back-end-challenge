@@ -35,3 +35,11 @@ def test_editar_artigo():
     """
     resp = client.put('/articles/1')
     assert resp.status_code == 200
+
+
+def test_deletar_artigo():
+    """
+    Testa se ao fazer uma requisição DELETE para o endpoint /articles/{id_artigo} é retornado código 200
+    """
+    resp = client.delete('/articles/1')
+    assert resp.status_code == 200
