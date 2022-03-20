@@ -1,5 +1,23 @@
 # Back-end Challenge 🏅 2021 - Space Flight News
->  This is a challenge by [Coodesh](https://coodesh.com/)
+>  This is a challenge by [Coodesh](https://lab.coodesh.com/public-challenges/back-end-challenge-2021)
+
+
+### Back-end Challenge 🏅 2021 - Space Flight News é uma REST API desenvolvida em FastAPI baseada na API [Space Flight News](https://api.spaceflightnewsapi.net/v3/documentation)
+
+# Projeto disponivel em
+> [Space Flight News API](https://back-end-challenge-mateus.herokuapp.com/)
+
+> [Documentação OpenAPI](https://back-end-challenge-mateus.herokuapp.com/docs#/)
+
+# Tecnologias utilizadas
+* Python
+* Pipenv
+* FastAPI
+* Pytest
+* Flake8
+* GitHub Actions
+* Heroku
+
 
 # Como instalar e utilizar o projeto
 1. Clone este repositorio e entre no diretorio
@@ -19,3 +37,5 @@ pipenv sync
 ```
 uvicorn src.server:app --reload --reload-dir=src
 ```
+
+
