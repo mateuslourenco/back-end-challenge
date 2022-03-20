@@ -19,3 +19,11 @@ def test_buscar_artigo_por_id():
     """
     resp = client.get('/articles/1')
     assert resp.status_code == 200
+
+
+def test_adicionar_novo_artigo():
+    """
+    Testa se ao fazer uma requisição post para o endpoint /articles/ é retornado código 200
+    """
+    resp = client.post('/articles/')
+    assert resp.status_code == 200
