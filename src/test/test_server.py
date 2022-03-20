@@ -4,7 +4,7 @@ import pytest
 @pytest.fixture
 def resp():
     """
-    Fixture que retorna uma resposta no endpoint raiz da API
+    Fixture que retorna resposta de uma requisição get no endpoint raiz da API
     """
     return client.get('/')
 
