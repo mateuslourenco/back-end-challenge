@@ -9,3 +9,11 @@ def listar_todos_os_artigos():
     Lista todos os artigos da base de dados
     """
     return {'msg': 'rota articles criada'}
+
+
+@router.get('/articles/{id_artigo}')
+def listar_artigo_por_id():
+    """
+    Obter a informação somente de um artigo
+    """
+    return {'msg': 'rota para articles/{id_artigo} criada'}
