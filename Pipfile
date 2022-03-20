@@ -8,6 +8,7 @@ fastapi = {extras = ["all"], version = "*"}
 uvicorn = "*"
 sqlalchemy = {extras = ["all"], version = "*"}
 python-decouple = "*"
+psycopg2-binary = "*"
 
 [dev-packages]
 pytest = "*"

@@ -18,3 +18,6 @@ class News(BaseModel):
     publishedAt: str
     launches: Optional[List]
     events: Optional[List]
+
+    class Config:
+        orm_mode = True
