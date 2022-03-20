@@ -35,7 +35,11 @@ pip install pipenv
 ```
 pipenv sync
 ```
-5. Inicialize a API com o uvicorn
+5. Crie um arquivo .env baseado no arquivo contrib/env-sample
+```
+cp contrib/env-sample .env
+```
+6. Inicialize a API com o uvicorn
 ```
 uvicorn src.server:app --reload --reload-dir=src
 ```
