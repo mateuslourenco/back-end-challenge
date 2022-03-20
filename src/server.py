@@ -1,6 +1,9 @@
 from fastapi import FastAPI
 
+from src.infra.sqlalchemy.config.database import criar_db
 from src.routers import rotas_articles
+
+criar_db()
 
 app = FastAPI()
 
