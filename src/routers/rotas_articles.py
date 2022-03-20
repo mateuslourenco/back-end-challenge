@@ -25,3 +25,11 @@ def adicionar_artigo():
     Adicionar um novo artigo
     """
     return {'msg': 'rota post para articles/ criada'}
+
+
+@router.put('/articles/{id_artigo}')
+def atualizar_artigo():
+    """
+    Atualizar arquivo
+    """
+    return {'msg': 'rota put para articles/{id_artigo} criada'}
