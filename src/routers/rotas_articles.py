@@ -36,7 +36,7 @@ def atualizar_artigo():
 
 
 @router.delete('/articles/{id_artigo}')
-def atualizar_artigo():
+def deletar_artigo():
     """
     Deletar artigo
     """
