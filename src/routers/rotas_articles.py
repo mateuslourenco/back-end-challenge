@@ -30,6 +30,14 @@ def adicionar_artigo():
 @router.put('/articles/{id_artigo}')
 def atualizar_artigo():
     """
-    Atualizar arquivo
+    Atualizar artigo
+    """
+    return {'msg': 'rota put para articles/{id_artigo} criada'}
+
+
+@router.delete('/articles/{id_artigo}')
+def atualizar_artigo():
+    """
+    Deletar artigo
     """
     return {'msg': 'rota put para articles/{id_artigo} criada'}
