@@ -17,3 +17,11 @@ def listar_artigo_por_id():
     Obter a informação somente de um artigo
     """
     return {'msg': 'rota para articles/{id_artigo} criada'}
+
+
+@router.post('/articles/')
+def adicionar_artigo():
+    """
+    Adicionar um novo artigo
+    """
+    return {'msg': 'rota post para articles/ criada'}
