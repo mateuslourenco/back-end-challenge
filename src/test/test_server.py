@@ -1,4 +1,9 @@
 import pytest
+from starlette.testclient import TestClient
+
+from src.server import app
+
+client = TestClient(app)
 
 
 @pytest.fixture
