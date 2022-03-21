@@ -1,3 +1,7 @@
+"""
+Script que consulta a API original e salva os artigos no banco de dados
+"""
+
 import requests
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import Session
@@ -7,18 +11,23 @@ from src.infra.sqlalchemy.repositorios.news import RepositorioNews
 
 criar_db()
 
+# Lógica para pegar o ultimo artigo e usar como limite de artigos
 url_com_ultimo_artigo = f'https://api.spaceflightnewsapi.net/v3/articles?_limit={1}'
 response = requests.get(url_com_ultimo_artigo)
 id_ultimo_artigo = response.json()[0]['id']
 
+# Request passando o id do ultimo artigo como limit, sendo assim, vai retornar todos os artigos desde o utlimo
 url_com_todos_os_artigos = f'https://api.spaceflightnewsapi.net/v3/articles?_limit={id_ultimo_artigo}'
-
 resp = requests.get(url_com_todos_os_artigos)
 
 session = Session(engine)
 
 
 def criar_news_api(news, session: Session):
+    """
+    Função que chama o repositorio para salvar os dados no banco.
+    Necessario passar uma 'news' e a sessao com o banco
+    """
     return RepositorioNews(session).criar_news(news)
 
 
