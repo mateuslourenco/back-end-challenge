@@ -46,6 +46,7 @@ for news in resp.json():
     except IndexError:
         news['events_provider'] = ''
 
+    # Tenta salvar dados no banco, caso ID já exista, para a execuçao do script
     try:
         criar_news_api(news, session)
     except IntegrityError:
